@@ -1,4 +1,4 @@
-# coding=utf-8
+#coding=utf-8
 # Copyright 2018 The Google AI Language Team Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -90,7 +90,7 @@ class BertConfig(object):
   @classmethod
   def from_json_file(cls, json_file):
     """Constructs a `BertConfig` from a json file of parameters."""
-    with tf.gfile.GFile(json_file, "r") as reader:
+    with open(json_file, "r") as reader:
       text = reader.read()
     return cls.from_dict(json.loads(text))
 
